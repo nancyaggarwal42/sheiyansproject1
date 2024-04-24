@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    transition: background-color 0.5s ease;
+}
+#main{
+    position: relative;
+}
+
+
+#page1{
+    width: 100%;
+    height: 40vh;
+    background-color: #0c4ec1;
+}
+#work{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(148, 56, 56);
+}
+
+.work-part1 h1{
+    display: flex;
+    font-size: 7em;
+    font-weight: 900;
+    border-radius: 500px;
+}
+
+#page2{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-color:rgb(142, 19, 19);
+}
+#center{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+   /* background-color: #000;*/
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 10;
+}
+#center .center-part1{
+    width: 100%;
+    height: 100%;
+   /* background: #c3bbbb;*/
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.div{
+    position: relative;
+    width: 290px;
+    height: 100%;
+    background-color: #a91a9b;
+    display: inline-block;
+    border-radius: 25px;
+    margin-left: 15px;
+    animation-name: scroll;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#page2 #center .center-part1::-webkit-scrollbar{
+    display: none;
+}
+
+.div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+  
+#page3{
+    width: 100%;
+    height: 150vh;
+    background-color: rgb(136, 3, 3);
+}
+#page3 .exp h1{
+    position: relative;
+    font-size: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+  .image-row .image-container{
+    height: 80%;
+    width: 23%;
+    border-radius: 20px;
+    /*background-color: #10b3f4;*/
+}
+
+
+
+
+
+    /* Style for the container */
+    .image-container {
+      position: relative;
+      width: calc(25% - 20px); /* Adjust as needed */
+      margin: 10px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    
+    /* Style for the image */
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease;
+    }
+    
+    /* Style for the overlay */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: height 0.5s ease;
+    }
+    
+    /* Style for the text inside the overlay */
+    .overlay-content {
+      position: absolute;
+      bottom: -50px; /* Initially hide the overlay below the image */
+      left: 0;
+      padding: 10px;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      transition: bottom 0.5s ease;
+    }
+    
+    /* Style for the button */
+    .overlay-content button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* Hover effect for the button */
+    .overlay-content button:hover {
+      background-color: #45a049;
+    }
+    
+    /* Hover effect for the overlay */
+    .image-container:hover .overlay {
+      height: 100%;
+    }
+  
+    /* Display overlay when hovered */
+    .image-container:hover .overlay-content {
+      bottom: 0;
+    }
+  
+    /* Scale effect for the image */
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
